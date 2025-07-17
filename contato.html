@@ -6,7 +6,6 @@
     <title>Contato - 8K Soluções em TI</title>
     <meta name="description" content="Entre em contato com a 8K Soluções em TI. Fale com nossos especialistas e descubra como podemos transformar a TI da sua empresa.">
     <script src="https://cdn.tailwindcss.com"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
 </head>
@@ -57,7 +56,7 @@
                     <!-- Contact Form -->
                     <div>
                         <h2 class="text-3xl font-bold text-gray-900 mb-8">Solicite um Orçamento</h2>
-                        <form class="space-y-6" id="contactForm">
+                        <form class="space-y-6" action="https://formspree.io/f/xpzvvpbr" method="POST" id="contactForm">
                             <div class="grid md:grid-cols-2 gap-6">
                                 <div>
                                     <label for="nome" class="block text-sm font-medium text-gray-700 mb-2">Nome *</label>
@@ -101,6 +100,11 @@
                                 <textarea id="mensagem" name="mensagem" rows="5" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="Descreva sua necessidade ou dúvida..."></textarea>
                             </div>
 
+                            <!-- Campo oculto para email de destino -->
+                            <input type="hidden" name="_to" value="comercial@8k.net.br">
+                            <input type="hidden" name="_subject" value="[8K Site] Nova solicitação de contato">
+                            <input type="hidden" name="_next" value="https://faustolc1.github.io/8k-ti-website/contato.html?success=true">
+                            
                             <button type="submit" class="w-full bg-gradient-to-r from-blue-600 to-indigo-600 text-white py-4 px-6 rounded-lg font-semibold hover:from-blue-700 hover:to-indigo-700 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl">
                                 📧 Enviar Mensagem
                             </button>
@@ -255,70 +259,33 @@
 
     <script src="js/main.js"></script>
     <script>
-        // Initialize EmailJS
-        (function(){
-            emailjs.init("YOUR_PUBLIC_KEY"); // Será configurado após criar conta
-        })();
+        // Check for success message
+        const urlParams = new URLSearchParams(window.location.search);
+        if (urlParams.get('success') === 'true') {
+            alert('✅ Mensagem enviada com sucesso! Entraremos em contato em breve.');
+            // Remove success parameter from URL
+            window.history.replaceState({}, document.title, window.location.pathname);
+        }
 
-        // Form submission handler
+        // Form submission handler - just basic validation
         document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Get form data
+            // Get form data for validation
             const formData = new FormData(this);
             const data = Object.fromEntries(formData.entries());
             
             // Validate required fields
             if (!data.nome || !data.empresa || !data.email || !data.telefone || !data.mensagem) {
+                e.preventDefault();
                 alert('❌ Por favor, preencha todos os campos obrigatórios.');
                 return;
             }
             
-            // Disable submit button to prevent double submission
+            // Show loading state
             const submitButton = this.querySelector('button[type="submit"]');
-            const originalText = submitButton.innerHTML;
-            submitButton.disabled = true;
             submitButton.innerHTML = '📧 Enviando...';
+            submitButton.disabled = true;
             
-            // Map service values to readable names
-            const servicosMap = {
-                'consultoria': 'Consultoria em TI',
-                'seguranca': 'Segurança da Informação',
-                'cloud': 'Cloud e Servidores',
-                'mpls': 'MPLS',
-                'vpn': 'VPN Corporativa',
-                'suporte': 'Suporte Técnico',
-                'outsourcing': 'Outsourcing',
-                'automacao': 'Automação',
-                'outro': 'Outro'
-            };
-            
-            // Prepare template parameters
-            const templateParams = {
-                from_name: data.nome,
-                from_email: data.email,
-                empresa: data.empresa,
-                telefone: data.telefone,
-                servico: servicosMap[data.servico] || data.servico || 'Não especificado',
-                message: data.mensagem,
-                to_email: 'comercial@8k.net.br'
-            };
-            
-            // Send email using EmailJS
-            emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', templateParams)
-                .then(function(response) {
-                    console.log('SUCCESS!', response.status, response.text);
-                    alert('✅ Mensagem enviada com sucesso! Entraremos em contato em breve.');
-                    document.getElementById('contactForm').reset();
-                }, function(error) {
-                    console.log('FAILED...', error);
-                    alert('❌ Erro ao enviar mensagem. Tente novamente ou entre em contato pelo WhatsApp.');
-                })
-                .finally(() => {
-                    // Re-enable submit button
-                    submitButton.disabled = false;
-                    submitButton.innerHTML = originalText;
-                });
+            // Form will submit normally to Formspree
         });
     </script>
 </body>
