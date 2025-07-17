@@ -1,0 +1,97 @@
+<svg width="200" height="80" viewBox="0 0 200 80" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="circuitGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d9488;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#2563eb;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#7c3aed;stop-opacity:1" />
+    </linearGradient>
+    <radialGradient id="centerGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#fbbf24;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f59e0b;stop-opacity:0" />
+    </radialGradient>
+  </defs>
+  
+  <!-- OPÇÃO 2: Circuito integrado / Chip processador -->
+  <g transform="translate(10, 10)">
+    
+    <!-- Chip principal quadrado -->
+    <rect x="15" y="15" width="30" height="30" rx="3" fill="url(#circuitGrad)" stroke="#1e40af" stroke-width="2"/>
+    
+    <!-- Circuitos internos -->
+    <g stroke="#60a5fa" stroke-width="1.5" fill="none">
+      <!-- Linhas horizontais -->
+      <line x1="18" y1="22" x2="42" y2="22"/>
+      <line x1="18" y1="30" x2="42" y2="30"/>
+      <line x1="18" y1="38" x2="42" y2="38"/>
+      <!-- Linhas verticais -->
+      <line x1="22" y1="18" x2="22" y2="42"/>
+      <line x1="30" y1="18" x2="30" y2="42"/>
+      <line x1="38" y1="18" x2="38" y2="42"/>
+    </g>
+    
+    <!-- Centro do processador -->
+    <circle cx="30" cy="30" r="6" fill="url(#centerGlow)" stroke="#f59e0b" stroke-width="1"/>
+    <text x="30" y="34" font-family="Arial Black, sans-serif" font-size="8" font-weight="900" text-anchor="middle" fill="#1f2937">8K</text>
+    
+    <!-- Pinos do chip (conexões externas) -->
+    <g fill="#374151">
+      <!-- Pinos superiores -->
+      <rect x="20" y="12" width="2" height="3"/>
+      <rect x="26" y="12" width="2" height="3"/>
+      <rect x="32" y="12" width="2" height="3"/>
+      <rect x="38" y="12" width="2" height="3"/>
+      
+      <!-- Pinos inferiores -->
+      <rect x="20" y="45" width="2" height="3"/>
+      <rect x="26" y="45" width="2" height="3"/>
+      <rect x="32" y="45" width="2" height="3"/>
+      <rect x="38" y="45" width="2" height="3"/>
+      
+      <!-- Pinos laterais -->
+      <rect x="12" y="20" width="3" height="2"/>
+      <rect x="12" y="26" width="3" height="2"/>
+      <rect x="12" y="32" width="3" height="2"/>
+      <rect x="12" y="38" width="3" height="2"/>
+      
+      <rect x="45" y="20" width="3" height="2"/>
+      <rect x="45" y="26" width="3" height="2"/>
+      <rect x="45" y="32" width="3" height="2"/>
+      <rect x="45" y="38" width="3" height="2"/>
+    </g>
+    
+    <!-- Trilhas de circuito saindo do chip -->
+    <g stroke="#10b981" stroke-width="2" fill="none">
+      <path d="M12,21 Q5,21 5,15 Q5,8 12,8"/>
+      <path d="M12,39 Q5,39 5,45 Q5,52 12,52"/>
+      <path d="M48,21 Q55,21 55,15 Q55,8 48,8"/>
+      <path d="M48,39 Q55,39 55,45 Q55,52 48,52"/>
+      <path d="M21,12 Q21,5 15,5"/>
+      <path d="M39,12 Q39,5 45,5"/>
+      <path d="M21,48 Q21,55 15,55"/>
+      <path d="M39,48 Q39,55 45,55"/>
+    </g>
+    
+    <!-- Terminais das trilhas -->
+    <g fill="#10b981">
+      <circle cx="12" cy="8" r="2"/>
+      <circle cx="12" cy="52" r="2"/>
+      <circle cx="48" cy="8" r="2"/>
+      <circle cx="48" cy="52" r="2"/>
+      <circle cx="15" cy="5" r="2"/>
+      <circle cx="45" cy="5" r="2"/>
+      <circle cx="15" cy="55" r="2"/>
+      <circle cx="45" cy="55" r="2"/>
+    </g>
+  </g>
+  
+  <!-- Texto da empresa -->
+  <g transform="translate(75, 15)">
+    <text x="0" y="20" font-family="Arial, sans-serif" font-size="24" font-weight="800" fill="#1f2937">8K</text>
+    <text x="35" y="12" font-family="Arial, sans-serif" font-size="11" font-weight="600" fill="#4b5563">SOLUÇÕES</text>
+    <text x="35" y="25" font-family="Arial, sans-serif" font-size="11" font-weight="600" fill="#4b5563">EM TI</text>
+    
+    <!-- Tagline tech -->
+    <text x="0" y="40" font-family="Courier New, monospace" font-size="8" font-weight="600" fill="#0d9488">ALTA PERFORMANCE</text>
+    <text x="0" y="52" font-family="Courier New, monospace" font-size="8" font-weight="600" fill="#7c3aed">TECNOLOGIA AVANÇADA</text>
+  </g>
+</svg>

@@ -1,0 +1,49 @@
+<svg width="120" height="40" viewBox="0 0 120 40" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="compactGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2563eb;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1d4ed8;stop-opacity:1" />
+    </linearGradient>
+    <radialGradient id="glowEffect" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:#1d4ed8;stop-opacity:0" />
+    </radialGradient>
+  </defs>
+  
+  <!-- Compact logo for header -->
+  <g transform="translate(2, 2)">
+    
+    <!-- Background glow effect -->
+    <circle cx="18" cy="18" r="16" fill="url(#glowEffect)"/>
+    
+    <!-- Main circle -->
+    <circle cx="18" cy="18" r="14" fill="url(#compactGradient)" stroke="#1e40af" stroke-width="1"/>
+    
+    <!-- Network pattern inside circle -->
+    <g stroke="#60a5fa" stroke-width="1.5" fill="none" opacity="0.7">
+      <!-- Grid lines -->
+      <line x1="10" y1="12" x2="26" y2="12"/>
+      <line x1="10" y1="18" x2="26" y2="18"/>
+      <line x1="10" y1="24" x2="26" y2="24"/>
+      <line x1="14" y1="8" x2="14" y2="28"/>
+      <line x1="22" y1="8" x2="22" y2="28"/>
+    </g>
+    
+    <!-- Network nodes -->
+    <g fill="#ffffff">
+      <circle cx="14" cy="12" r="1"/>
+      <circle cx="22" cy="12" r="1"/>
+      <circle cx="18" cy="18" r="1.5" fill="#fbbf24"/>
+      <circle cx="14" cy="24" r="1"/>
+      <circle cx="22" cy="24" r="1"/>
+    </g>
+    
+    <!-- "8K" text -->
+    <text x="18" y="23" font-family="Arial Black, sans-serif" font-size="10" font-weight="900" text-anchor="middle" fill="#ffffff">8K</text>
+    
+    <!-- Company text -->
+    <text x="40" y="15" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#1f2937">8K</text>
+    <text x="40" y="27" font-family="Arial, sans-serif" font-size="8" font-weight="600" fill="#6b7280">SOLUÇÕES EM TI</text>
+    
+  </g>
+</svg>

@@ -1,0 +1,100 @@
+<svg width="200" height="80" viewBox="0 0 200 80" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="networkGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8b5cf6;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#3b82f6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#06b6d4;stop-opacity:1" />
+    </linearGradient>
+    <radialGradient id="nodeGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#fbbf24;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#f59e0b;stop-opacity:0" />
+    </radialGradient>
+  </defs>
+  
+  <!-- OPÇÃO 4: Rede neural / Topologia de rede -->
+  <g transform="translate(10, 10)">
+    
+    <!-- Nós da rede em estrutura hexagonal -->
+    <g fill="url(#networkGrad)" stroke="#1e40af" stroke-width="2">
+      <!-- Nó central (maior) -->
+      <circle cx="30" cy="30" r="8" fill="url(#nodeGlow)" stroke="#f59e0b" stroke-width="3"/>
+      
+      <!-- Nós secundários -->
+      <circle cx="15" cy="15" r="5"/>
+      <circle cx="45" cy="15" r="5"/>
+      <circle cx="50" cy="30" r="5"/>
+      <circle cx="45" cy="45" r="5"/>
+      <circle cx="15" cy="45" r="5"/>
+      <circle cx="10" cy="30" r="5"/>
+      
+      <!-- Nós periféricos -->
+      <circle cx="5" cy="10" r="3" fill="#10b981"/>
+      <circle cx="55" cy="10" r="3" fill="#10b981"/>
+      <circle cx="60" cy="35" r="3" fill="#10b981"/>
+      <circle cx="55" cy="50" r="3" fill="#10b981"/>
+      <circle cx="5" cy="50" r="3" fill="#10b981"/>
+      <circle cx="0" cy="25" r="3" fill="#10b981"/>
+    </g>
+    
+    <!-- Conexões da rede -->
+    <g stroke="url(#networkGrad)" stroke-width="2" fill="none" opacity="0.8">
+      <!-- Conexões do nó central -->
+      <line x1="30" y1="30" x2="15" y2="15"/>
+      <line x1="30" y1="30" x2="45" y2="15"/>
+      <line x1="30" y1="30" x2="50" y2="30"/>
+      <line x1="30" y1="30" x2="45" y2="45"/>
+      <line x1="30" y1="30" x2="15" y2="45"/>
+      <line x1="30" y1="30" x2="10" y2="30"/>
+      
+      <!-- Conexões secundárias -->
+      <line x1="15" y1="15" x2="5" y2="10"/>
+      <line x1="45" y1="15" x2="55" y2="10"/>
+      <line x1="50" y1="30" x2="60" y2="35"/>
+      <line x1="45" y1="45" x2="55" y2="50"/>
+      <line x1="15" y1="45" x2="5" y2="50"/>
+      <line x1="10" y1="30" x2="0" y2="25"/>
+      
+      <!-- Conexões entre nós secundários -->
+      <line x1="15" y1="15" x2="45" y2="15"/>
+      <line x1="45" y1="45" x2="15" y2="45"/>
+      <line x1="10" y1="30" x2="50" y2="30"/>
+    </g>
+    
+    <!-- "8K" no nó central -->
+    <text x="30" y="35" font-family="Arial Black, sans-serif" font-size="12" font-weight="900" text-anchor="middle" fill="#1f2937">8K</text>
+    
+    <!-- Indicadores de dados fluindo -->
+    <g fill="#fbbf24">
+      <circle cx="22" cy="22" r="1">
+        <animateTransform attributeName="transform" type="translate" 
+                         values="0,0; 8,8; 16,16; 8,8; 0,0" 
+                         dur="2s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="38" cy="22" r="1">
+        <animateTransform attributeName="transform" type="translate" 
+                         values="0,0; -8,8; -16,16; -8,8; 0,0" 
+                         dur="2.5s" repeatCount="indefinite"/>
+      </circle>
+    </g>
+    
+    <!-- Pulsos de conexão -->
+    <g stroke="#10b981" stroke-width="1" fill="none" opacity="0.5">
+      <circle cx="30" cy="30" r="12">
+        <animate attributeName="r" values="12;20;12" dur="3s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.5;0.1;0.5" dur="3s" repeatCount="indefinite"/>
+      </circle>
+    </g>
+  </g>
+  
+  <!-- Texto da empresa -->
+  <g transform="translate(75, 15)">
+    <text x="0" y="20" font-family="Arial, sans-serif" font-size="24" font-weight="800" fill="#1f2937">8K</text>
+    <text x="35" y="12" font-family="Arial, sans-serif" font-size="11" font-weight="600" fill="#4b5563">SOLUÇÕES</text>
+    <text x="35" y="25" font-family="Arial, sans-serif" font-size="11" font-weight="600" fill="#4b5563">EM TI</text>
+    
+    <!-- Tech terms -->
+    <text x="0" y="38" font-family="Arial, sans-serif" font-size="8" font-weight="600" fill="#8b5cf6">REDES INTELIGENTES</text>
+    <text x="0" y="48" font-family="Arial, sans-serif" font-size="8" font-weight="600" fill="#3b82f6">CONECTIVIDADE TOTAL</text>
+    <text x="0" y="58" font-family="Arial, sans-serif" font-size="8" font-weight="600" fill="#06b6d4">INFRAESTRUTURA 4.0</text>
+  </g>
+</svg>

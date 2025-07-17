@@ -1,0 +1,87 @@
+<svg width="200" height="80" viewBox="0 0 200 80" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="corpGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#7c3aed;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#a855f7;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="techGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#06b6d4;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#3b82f6;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Logo estilo startup tech -->
+  <g transform="translate(10, 10)">
+    
+    <!-- Elemento principal: círculo com anel -->
+    <g>
+      <!-- Anel externo -->
+      <circle cx="30" cy="30" r="18" fill="none" stroke="url(#techGrad)" stroke-width="4"/>
+      
+      <!-- Círculo interno -->
+      <circle cx="30" cy="30" r="12" fill="url(#corpGrad2)"/>
+      
+      <!-- Padrão tech no anel -->
+      <g stroke="#60a5fa" stroke-width="1" fill="none" opacity="0.7">
+        <!-- Segmentos do anel -->
+        <path d="M48,30 A18,18 0 0,1 42,42" stroke-width="2"/>
+        <path d="M42,42 A18,18 0 0,1 30,48" stroke-width="2"/>
+        <path d="M30,48 A18,18 0 0,1 18,42" stroke-width="2"/>
+        <path d="M18,42 A18,18 0 0,1 12,30" stroke-width="2"/>
+        <path d="M12,30 A18,18 0 0,1 18,18" stroke-width="2"/>
+        <path d="M18,18 A18,18 0 0,1 30,12" stroke-width="2"/>
+        <path d="M30,12 A18,18 0 0,1 42,18" stroke-width="2"/>
+        <path d="M42,18 A18,18 0 0,1 48,30" stroke-width="2"/>
+      </g>
+      
+      <!-- "8K" no centro -->
+      <text x="30" y="35" font-family="Arial Black, sans-serif" font-size="12" font-weight="900" text-anchor="middle" fill="white">8K</text>
+      
+      <!-- Pontos de dados ao redor -->
+      <g>
+        <circle cx="48" cy="30" r="2" fill="#10b981">
+          <animateTransform attributeName="transform" type="rotate" 
+                           values="0 30 30; 360 30 30" 
+                           dur="8s" repeatCount="indefinite"/>
+        </circle>
+        <circle cx="42" cy="18" r="1.5" fill="#fbbf24">
+          <animateTransform attributeName="transform" type="rotate" 
+                           values="45 30 30; 405 30 30" 
+                           dur="6s" repeatCount="indefinite"/>
+        </circle>
+        <circle cx="18" cy="42" r="1.5" fill="#ef4444">
+          <animateTransform attributeName="transform" type="rotate" 
+                           values="225 30 30; 585 30 30" 
+                           dur="7s" repeatCount="indefinite"/>
+        </circle>
+      </g>
+      
+      <!-- Conexões externas -->
+      <g stroke="url(#techGrad)" stroke-width="2" fill="none">
+        <line x1="48" y1="30" x2="58" y2="30"/>
+        <line x1="12" y1="30" x2="2" y2="30"/>
+        <line x1="30" y1="12" x2="30" y2="2"/>
+        <line x1="30" y1="48" x2="30" y2="58"/>
+      </g>
+      
+      <!-- Nós externos -->
+      <g fill="url(#techGrad)">
+        <rect x="56" y="28" width="4" height="4" rx="1"/>
+        <rect x="0" y="28" width="4" height="4" rx="1"/>
+        <rect x="28" y="0" width="4" height="4" rx="1"/>
+        <rect x="28" y="56" width="4" height="4" rx="1"/>
+      </g>
+    </g>
+  </g>
+  
+  <!-- Texto moderno -->
+  <g transform="translate(75, 20)">
+    <text x="0" y="15" font-family="Arial, sans-serif" font-size="22" font-weight="800" fill="#1f2937">8K</text>
+    <text x="30" y="8" font-family="Arial, sans-serif" font-size="10" font-weight="600" fill="#7c3aed">SOLUÇÕES</text>
+    <text x="30" y="19" font-family="Arial, sans-serif" font-size="10" font-weight="600" fill="#7c3aed">EM TI</text>
+    
+    <!-- Slogan tech -->
+    <text x="0" y="35" font-family="Arial, sans-serif" font-size="8" font-weight="600" fill="#06b6d4">• INNOVATION DRIVEN</text>
+    <text x="0" y="45" font-family="Arial, sans-serif" font-size="8" font-weight="600" fill="#3b82f6">• FUTURE READY</text>
+  </g>
+</svg>
