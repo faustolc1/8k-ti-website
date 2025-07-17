@@ -18,24 +18,40 @@ O novo site deve refletir esses serviços com clareza, ícones específicos e im
 
 ---
 
-## 🛠️ Tecnologias & Frameworks recomendados
+## 🛠️ Stack Tecnológico Recomendado (Simples e Eficaz)
 
-### Front-end (UI moderna e responsiva)
-- **Next.js 14** (React + SSR/SSG) — excelente performance, SEO e versão estática ou dinâmica eficiente :contentReference[oaicite:2]{index=2}  
-- **Nuxt.js** (para quem preferir Vue) — renderização server-side com ótimo suporte a SEO :contentReference[oaicite:3]{index=3}  
+### Opção 1: HTML/CSS/JS Puro + Node.js (RECOMENDADO)
+- **HTML5** estrutura semântica limpa
+- **CSS3** com Flexbox/Grid para layouts responsivos
+- **JavaScript** vanilla ou com jQuery para interatividade
+- **Node.js + Express** para servidor local de desenvolvimento
+- **Live Server** para reload automático durante desenvolvimento
 
-Componentes estilizados com:
-- **Tailwind CSS** — utilitário moderno para design rápido e responsivo :contentReference[oaicite:4]{index=4}  
-- **Material‑UI (MUI)** ou **Radix UI / ShadCN UI** para componentes elegantes e acessíveis :contentReference[oaicite:5]{index=5}  
+**Vantagens:**
+- Extremamente estável e confiável
+- Sem dependências complexas
+- Carregamento ultra-rápido
+- Fácil manutenção e deploy
+- Compatível com qualquer servidor
 
-### Frameworks alternativos  
-- **SvelteKit** — compilação em runtime nativo para site ultra leve e performance máxima :contentReference[oaicite:6]{index=6}  
-- **SolidJS** — ótima performance, reatividade eficiente sem virtual DOM :contentReference[oaicite:7]{index=7}  
+### Opção 2: Vite + HTML/CSS/JS
+- **Vite** como bundler moderno e rápido
+- **HTML/CSS/JS** puro sem frameworks
+- **PostCSS** para features CSS avançadas
+- **ESBuild** para build otimizado
+
+**Vantagens:**
+- Build instantâneo
+- Hot reload rápido
+- Sem complexidade de frameworks
+- Excelente performance
 
 ### CSS & Visual  
-- Grid flexível com Tailwind CSS  
-- SASS / CSS Modules para estilos globais e específicos  
-- Uso de ícones SVG modernos e ícone sets flat / line art tecnológico (automação, cloud, segurança) — veja os exemplos acima
+- **CSS Grid + Flexbox** para layouts responsivos
+- **CSS Custom Properties** para temas e variáveis
+- **Ícones SVG** inline ou sprite sheets
+- **Google Fonts** para tipografia (Inter + Poppins)
+- **Gradientes CSS** para efeitos visuais modernos
 
 ---
 
@@ -48,72 +64,67 @@ Componentes estilizados com:
 
 ---
 
-## 🧩 Estrutura sugerida de arquivo
+## 🧩 Estrutura de Arquivos (HTML/CSS/JS)
 
-/src
-/components
-ServiceCard.tsx
-HeroBanner.tsx
-Testimonials.tsx
-CTAButton.tsx
-/pages
-index.tsx
-sobre.tsx
-servicos/
-infraestrutura.tsx
-seguranca.tsx
-cloud.tsx
-contato.tsx
-/styles
-globals.css
-tailwind.config.js
-/public
-/img
-hero.jpg
-icons/
-cloud.svg, security.svg, support.svg
-
-yaml
-Copy
-Edit
+```
+/projeto-8k/
+├── index.html          # Página principal
+├── sobre.html          # Página sobre a empresa
+├── servicos.html       # Página de serviços
+├── contato.html        # Página de contato
+├── /css/
+│   ├── main.css        # Estilos principais
+│   └── responsive.css  # Media queries
+├── /js/
+│   ├── main.js         # Scripts principais
+│   └── contact.js      # Formulário de contato
+├── /img/
+│   ├── hero-bg.jpg     # Background hero
+│   ├── logo.svg        # Logo da empresa
+│   └── /icons/         # Ícones SVG dos serviços
+├── /assets/
+│   └── fonts/          # Fontes locais (opcional)
+└── server.js           # Servidor Node.js para desenvolvimento
+```
 
 ---
 
-## ⚙️ Fluxo de desenvolvimento
+## ⚙️ Fluxo de desenvolvimento SIMPLIFICADO
 
-1. Escolher framework: **Next.js + Tailwind** (ou Nuxt.js se optar por Vue)  
-2. Fazer wireframe focado no menu, secções, hero banner e cards de serviços  
-3. Integrar ícones vetoriais e imagens relacionadas aos serviços de TI  
-4. Desenvolver página estática dos serviços (SSG) + landing principal dinâmica  
-5. Implementar formulário de contato com reCAPTCHA e envio via API backend (Node.js ou Backendless)  
-6. Otimização SEO: metadados, sitemap, Open Graph, performance e acessibilidade  
-
----
-
-## 📈 Benefícios reais
-
-- **Performance ultra rápida** (Next.js, SSR/SSG, imagens otimizadas)  
-- **SEO robusto** (estrutura bem indexada e SSR)  
-- **Design moderno e responsivo** para celulares e desktops  
-- **Visual profissional** alinhado com marca TI  
-- **Facilidade de manutenção**, escalabilidade e extensibilidade  
+1. **Estrutura HTML semântica** - Criar as 4 páginas principais
+2. **CSS Grid + Flexbox** - Layout responsivo sem dependências
+3. **JavaScript vanilla** - Interatividade simples e eficaz
+4. **Servidor Node.js** - `http-server` ou `live-server` para desenvolvimento
+5. **Ícones SVG inline** - Performance e customização
+6. **Formulário funcional** - JavaScript + backend simples
 
 ---
 
-## ✅ Implementação prática usando Claude
+## 📈 Benefícios da Abordagem Simples
 
-Use o prompt abaixo para Claude AI ou equivalente:
+- **Carregamento instantâneo** (sem frameworks pesados)
+- **Zero configuração** - funciona em qualquer servidor
+- **Manutenção fácil** - código limpo e direto
+- **SEO nativo** - HTML semântico natural
+- **Deploy universal** - compatível com qualquer hosting
+- **Performance máxima** - apenas o necessário
 
-Criar o site da 8K TI usando Next.js 14 + Tailwind CSS:
+---
 
-Página inicial com hero, serviços, casos e CTA
+## ✅ Comandos para iniciar
 
-Landing pages para cada serviço (consultoria, segurança, cloud etc.)
+```bash
+# Criar estrutura básica
+mkdir projeto-8k && cd projeto-8k
 
-Ícones técnicos como SVG line-art relacionados a TI
+# Instalar servidor de desenvolvimento
+npm install -g live-server
 
-Código organizado conforme estrutura descrita
+# Iniciar servidor
+live-server --port=3000
 
-Estilização moderna com fontes Inter ou Poppins e paleta de cor corporativa azul/verde
+# Ou usar Node.js puro
+node server.js
+```
 
-SEO básico e formulário funcional de contato
+**Resultado:** Site funcionando em http://localhost:3000 instantaneamente!

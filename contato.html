@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato - 8K Soluções em TI</title>
+    <meta name="description" content="Entre em contato com a 8K Soluções em TI. Fale com nossos especialistas e descubra como podemos transformar a TI da sua empresa.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-brand">
+                <a href="index.html" class="flex items-center">
+                    <img src="img/icons/8k.png" alt="8K Soluções em TI" class="h-24 w-auto">
+                </a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="servicos.html">Serviços</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="contato.html" class="active">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="pt-8 pb-16 bg-gradient-to-r from-green-600 to-blue-600 relative overflow-hidden">
+        <!-- Background Image -->
+        <div class="absolute inset-0 bg-black/20">
+            <img src="https://images.unsplash.com/photo-1423666639041-f56000c27a9a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1746&q=80" 
+                 alt="Contato e comunicação" 
+                 class="w-full h-full object-cover opacity-30">
+        </div>
+        
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="max-w-4xl mx-auto text-center text-white">
+                <h1 class="text-5xl md:text-6xl font-bold mb-6 drop-shadow-lg">
+                    Entre em <span class="text-yellow-300">Contato</span>
+                </h1>
+                <p class="text-xl md:text-2xl opacity-90 leading-relaxed drop-shadow-md">
+                    Fale com nossos especialistas e descubra como podemos transformar a TI da sua empresa.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Info -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="max-w-6xl mx-auto">
+                <div class="grid md:grid-cols-2 gap-12">
+                    <!-- Contact Form -->
+                    <div>
+                        <h2 class="text-3xl font-bold text-gray-900 mb-8">Solicite um Orçamento</h2>
+                        <form class="space-y-6" id="contactForm">
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div>
+                                    <label for="nome" class="block text-sm font-medium text-gray-700 mb-2">Nome *</label>
+                                    <input type="text" id="nome" name="nome" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                                </div>
+                                <div>
+                                    <label for="empresa" class="block text-sm font-medium text-gray-700 mb-2">Empresa *</label>
+                                    <input type="text" id="empresa" name="empresa" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                                </div>
+                            </div>
+                            
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div>
+                                    <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email *</label>
+                                    <input type="email" id="email" name="email" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                                </div>
+                                <div>
+                                    <label for="telefone" class="block text-sm font-medium text-gray-700 mb-2">Telefone *</label>
+                                    <input type="tel" id="telefone" name="telefone" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                                </div>
+                            </div>
+
+                            <div>
+                                <label for="servico" class="block text-sm font-medium text-gray-700 mb-2">Serviço de Interesse</label>
+                                <select id="servico" name="servico" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                                    <option value="">Selecione um serviço</option>
+                                    <option value="consultoria">Consultoria em TI</option>
+                                    <option value="seguranca">Segurança da Informação</option>
+                                    <option value="cloud">Cloud e Servidores</option>
+                                    <option value="suporte">Suporte Técnico</option>
+                                    <option value="outsourcing">Outsourcing</option>
+                                    <option value="automacao">Automação</option>
+                                    <option value="outro">Outro</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label for="mensagem" class="block text-sm font-medium text-gray-700 mb-2">Mensagem *</label>
+                                <textarea id="mensagem" name="mensagem" rows="5" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="Descreva sua necessidade ou dúvida..."></textarea>
+                            </div>
+
+                            <button type="submit" class="w-full bg-gradient-to-r from-blue-600 to-indigo-600 text-white py-4 px-6 rounded-lg font-semibold hover:from-blue-700 hover:to-indigo-700 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl">
+                                📧 Enviar Mensagem
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- Contact Info -->
+                    <div>
+                        <h2 class="text-3xl font-bold text-gray-900 mb-8">Informações de Contato</h2>
+                        
+                        <div class="space-y-6">
+                            <!-- Endereço -->
+                            <div class="bg-gray-50 p-6 rounded-xl relative overflow-hidden">
+                                <div class="absolute inset-0 opacity-5">
+                                    <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" 
+                                         alt="Escritório moderno" 
+                                         class="w-full h-full object-cover">
+                                </div>
+                                
+                                <div class="flex items-start space-x-4 relative z-10">
+                                    <div class="bg-blue-100 p-3 rounded-lg">
+                                        <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <h3 class="font-semibold text-gray-900 mb-2">Endereço</h3>
+                                        <p class="text-gray-600">
+                                            Rua das Tecnologias, 123<br>
+                                            Vila Olímpia - São Paulo/SP<br>
+                                            CEP: 04551-000
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Telefone -->
+                            <div class="bg-gray-50 p-6 rounded-xl">
+                                <div class="flex items-start space-x-4">
+                                    <div class="bg-green-100 p-3 rounded-lg">
+                                        <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <h3 class="font-semibold text-gray-900 mb-2">Telefone</h3>
+                                        <p class="text-gray-600">
+                                            <a href="tel:+551133334444" class="hover:text-green-600">(11) 3333-4444</a><br>
+                                            <a href="tel:+5511999887766" class="hover:text-green-600">(11) 99988-7766</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Email -->
+                            <div class="bg-gray-50 p-6 rounded-xl">
+                                <div class="flex items-start space-x-4">
+                                    <div class="bg-purple-100 p-3 rounded-lg">
+                                        <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <h3 class="font-semibold text-gray-900 mb-2">Email</h3>
+                                        <p class="text-gray-600">
+                                            <a href="mailto:contato@8k.net.br" class="hover:text-purple-600">contato@8k.net.br</a><br>
+                                            <a href="mailto:suporte@8k.net.br" class="hover:text-purple-600">suporte@8k.net.br</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Horário -->
+                            <div class="bg-gray-50 p-6 rounded-xl">
+                                <div class="flex items-start space-x-4">
+                                    <div class="bg-orange-100 p-3 rounded-lg">
+                                        <svg class="w-6 h-6 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <h3 class="font-semibold text-gray-900 mb-2">Horário de Funcionamento</h3>
+                                        <p class="text-gray-600">
+                                            Segunda à Sexta: 8h às 18h<br>
+                                            Sábado: 8h às 12h<br>
+                                            <span class="text-green-600 font-semibold">Suporte 24/7 disponível</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">Perguntas Frequentes</h2>
+                
+                <div class="space-y-6">
+                    <div class="bg-white p-6 rounded-xl shadow-sm">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-3">🔍 Como posso solicitar um orçamento?</h3>
+                        <p class="text-gray-600">
+                            Preencha o formulário ao lado ou entre em contato diretamente pelos nossos canais. Retornamos em até 2 horas úteis.
+                        </p>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-xl shadow-sm">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-3">⚡ Vocês oferecem suporte de emergência?</h3>
+                        <p class="text-gray-600">
+                            Sim! Oferecemos suporte 24/7 para situações críticas. Entre em contato pelo telefone de emergência que será fornecido após a contratação.
+                        </p>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-xl shadow-sm">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-3">🏢 Atendem empresas de qual porte?</h3>
+                        <p class="text-gray-600">
+                            Atendemos desde pequenas empresas até grandes corporações. Nossas soluções são escaláveis e personalizadas para cada necessidade.
+                        </p>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-xl shadow-sm">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-3">📍 Atendem outras cidades além de São Paulo?</h3>
+                        <p class="text-gray-600">
+                            Sim! Oferecemos serviços remotos para todo o Brasil e atendimento presencial na Grande São Paulo.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 8K Soluções em TI. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/5511999027788?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20os%20servi%C3%A7os%20da%208K%20Solu%C3%A7%C3%B5es%20em%20TI." 
+       class="whatsapp-float" 
+       target="_blank" 
+       title="Falar no WhatsApp">
+        <i>💬</i>
+    </a>
+
+    <script src="js/main.js"></script>
+    <script>
+        // Initialize EmailJS
+        (function(){
+            emailjs.init("YOUR_PUBLIC_KEY"); // Será configurado após criar conta
+        })();
+
+        // Form submission handler
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(this);
+            const data = Object.fromEntries(formData.entries());
+            
+            // Validate required fields
+            if (!data.nome || !data.empresa || !data.email || !data.telefone || !data.mensagem) {
+                alert('❌ Por favor, preencha todos os campos obrigatórios.');
+                return;
+            }
+            
+            // Disable submit button to prevent double submission
+            const submitButton = this.querySelector('button[type="submit"]');
+            const originalText = submitButton.innerHTML;
+            submitButton.disabled = true;
+            submitButton.innerHTML = '📧 Enviando...';
+            
+            // Map service values to readable names
+            const servicosMap = {
+                'consultoria': 'Consultoria em TI',
+                'seguranca': 'Segurança da Informação',
+                'cloud': 'Cloud e Servidores',
+                'suporte': 'Suporte Técnico',
+                'outsourcing': 'Outsourcing',
+                'automacao': 'Automação',
+                'outro': 'Outro'
+            };
+            
+            // Prepare template parameters
+            const templateParams = {
+                from_name: data.nome,
+                from_email: data.email,
+                empresa: data.empresa,
+                telefone: data.telefone,
+                servico: servicosMap[data.servico] || data.servico || 'Não especificado',
+                message: data.mensagem,
+                to_email: 'contato@8k.net.br'
+            };
+            
+            // Send email using EmailJS
+            emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', templateParams)
+                .then(function(response) {
+                    console.log('SUCCESS!', response.status, response.text);
+                    alert('✅ Mensagem enviada com sucesso! Entraremos em contato em breve.');
+                    document.getElementById('contactForm').reset();
+                }, function(error) {
+                    console.log('FAILED...', error);
+                    alert('❌ Erro ao enviar mensagem. Tente novamente ou entre em contato pelo WhatsApp.');
+                })
+                .finally(() => {
+                    // Re-enable submit button
+                    submitButton.disabled = false;
+                    submitButton.innerHTML = originalText;
+                });
+        });
+    </script>
+</body>
+</html>
