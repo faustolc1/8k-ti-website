@@ -356,7 +356,7 @@ h1, h2, h3, h4, h5, h6 {
 @media (min-width: 1024px) {
     .logo-responsive {
         height: 112px; /* h-28 */
-        width: 280px; /* w-70 */
+        width: 320px; /* increased horizontal size */
     }
 }
 
