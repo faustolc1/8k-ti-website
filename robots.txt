@@ -1,0 +1,24 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://8k.net.br/sitemap.xml
+
+# Allow search engines to crawl all content
+Allow: /css/
+Allow: /js/
+Allow: /img/
+
+# Block crawling of internal files
+Disallow: /.git/
+Disallow: /.github/
+Disallow: /*.md$
+
+# Specific pages to prioritize
+Allow: /index.html
+Allow: /servicos.html
+Allow: /sobre.html
+Allow: /contato.html
+
+# SEO-friendly crawl delay
+Crawl-delay: 1
