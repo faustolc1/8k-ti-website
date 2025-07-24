@@ -340,23 +340,33 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
-/* Logo Responsive */
+/* Logo Responsive - Otimizado para Futura V1 Holográfico */
 .logo-responsive {
-    height: 80px; /* h-20 */
-    width: 192px; /* w-48 */
+    height: 60px; /* Melhor proporção para mobile */
+    width: auto; /* Mantém proporção do SVG */
+    max-width: 180px;
+    transition: all 0.3s ease;
 }
 
 @media (min-width: 768px) {
     .logo-responsive {
-        height: 96px; /* h-24 */
-        width: 240px; /* w-60 */
+        height: 80px; /* Tamanho médio para tablet */
+        max-width: 240px;
     }
 }
 
 @media (min-width: 1024px) {
     .logo-responsive {
-        height: 112px; /* h-28 */
-        width: 320px; /* increased horizontal size */
+        height: 100px; /* Tamanho ideal para desktop */
+        max-width: 300px;
+    }
+}
+
+/* Hover effect para desktop */
+@media (min-width: 1024px) {
+    .logo-responsive:hover {
+        transform: scale(1.05);
+        filter: brightness(1.1);
     }
 }
 
