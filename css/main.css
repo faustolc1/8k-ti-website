@@ -340,33 +340,82 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
-/* Logo Responsive - Otimizado para Futura V1 Holográfico */
+/* Logo com Texto - Layout Horizontal */
+.nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
 .logo-responsive {
-    height: 60px; /* Melhor proporção para mobile */
-    width: auto; /* Mantém proporção do SVG */
-    max-width: 180px;
+    height: 70px; /* Aumentado verticalmente para mobile */
+    width: auto;
+    max-width: 200px;
     transition: all 0.3s ease;
+    flex-shrink: 0;
+}
+
+.brand-text {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    color: #2563eb;
+    line-height: 1.2;
+    white-space: nowrap;
 }
 
 @media (min-width: 768px) {
+    .nav-brand {
+        gap: 20px;
+    }
+    
     .logo-responsive {
-        height: 80px; /* Tamanho médio para tablet */
-        max-width: 240px;
+        height: 90px; /* Aumentado para tablet */
+        max-width: 260px;
+    }
+    
+    .brand-text {
+        font-size: 18px;
     }
 }
 
 @media (min-width: 1024px) {
+    .nav-brand {
+        gap: 25px;
+    }
+    
     .logo-responsive {
-        height: 100px; /* Tamanho ideal para desktop */
-        max-width: 300px;
+        height: 120px; /* Bem maior para desktop */
+        max-width: 350px;
+    }
+    
+    .brand-text {
+        font-size: 22px;
+        font-weight: 700;
     }
 }
 
-/* Hover effect para desktop */
+/* Hover effects para desktop */
 @media (min-width: 1024px) {
-    .logo-responsive:hover {
+    .nav-brand:hover .logo-responsive {
         transform: scale(1.05);
         filter: brightness(1.1);
+    }
+    
+    .nav-brand:hover .brand-text {
+        color: #1d4ed8;
+        transform: translateX(5px);
+    }
+}
+
+/* Esconder texto em telas muito pequenas */
+@media (max-width: 480px) {
+    .brand-text {
+        display: none;
+    }
+    
+    .nav-brand {
+        gap: 0;
     }
 }
 
