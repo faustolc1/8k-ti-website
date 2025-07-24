@@ -340,71 +340,97 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
-/* Logo com Texto - Layout Horizontal */
+/* Logo com Texto - Layout Horizontal Aprimorado */
 .nav-brand {
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 18px;
 }
 
 .logo-responsive {
-    height: 70px; /* Aumentado verticalmente para mobile */
+    height: 70px;
     width: auto;
-    max-width: 200px;
+    max-width: 240px; /* Aumentado horizontalmente */
     transition: all 0.3s ease;
     flex-shrink: 0;
 }
 
 .brand-text {
     font-family: 'Poppins', sans-serif;
-    font-weight: 600;
-    font-size: 16px;
-    color: #2563eb;
+    font-weight: 700;
+    font-size: 20px; /* Aumentado */
+    background: linear-gradient(135deg, #00f5ff 0%, #8b5cf6 50%, #00f5ff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
     line-height: 1.2;
     white-space: nowrap;
+    text-shadow: 0 0 10px rgba(0, 245, 255, 0.3);
+    animation: textGlow 3s ease-in-out infinite alternate;
+}
+
+@keyframes textGlow {
+    from {
+        filter: drop-shadow(0 0 5px rgba(0, 245, 255, 0.4));
+    }
+    to {
+        filter: drop-shadow(0 0 15px rgba(139, 92, 246, 0.6));
+    }
 }
 
 @media (min-width: 768px) {
     .nav-brand {
-        gap: 20px;
+        gap: 22px;
     }
     
     .logo-responsive {
-        height: 90px; /* Aumentado para tablet */
-        max-width: 260px;
+        height: 90px;
+        max-width: 300px; /* Aumentado */
     }
     
     .brand-text {
-        font-size: 18px;
+        font-size: 24px; /* Aumentado */
     }
 }
 
 @media (min-width: 1024px) {
     .nav-brand {
-        gap: 25px;
+        gap: 28px;
     }
     
     .logo-responsive {
-        height: 120px; /* Bem maior para desktop */
-        max-width: 350px;
+        height: 120px;
+        max-width: 400px; /* Bem aumentado horizontalmente */
     }
     
     .brand-text {
-        font-size: 22px;
-        font-weight: 700;
+        font-size: 28px; /* Bem aumentado */
+        font-weight: 800;
     }
 }
 
-/* Hover effects para desktop */
+/* Hover effects aprimorados para desktop */
 @media (min-width: 1024px) {
     .nav-brand:hover .logo-responsive {
-        transform: scale(1.05);
-        filter: brightness(1.1);
+        transform: scale(1.08);
+        filter: brightness(1.2) saturate(1.1);
     }
     
     .nav-brand:hover .brand-text {
-        color: #1d4ed8;
-        transform: translateX(5px);
+        background: linear-gradient(135deg, #00f5ff 0%, #a855f7 30%, #00f5ff 60%, #8b5cf6 100%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        transform: translateX(8px) scale(1.05);
+        animation: textGlowHover 0.5s ease-out;
+    }
+}
+
+@keyframes textGlowHover {
+    0% {
+        filter: drop-shadow(0 0 15px rgba(139, 92, 246, 0.6));
+    }
+    100% {
+        filter: drop-shadow(0 0 25px rgba(0, 245, 255, 0.8)) drop-shadow(0 0 35px rgba(168, 85, 247, 0.4));
     }
 }
 
