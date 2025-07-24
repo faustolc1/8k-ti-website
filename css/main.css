@@ -340,137 +340,37 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
-/* Logo com Texto - Layout Horizontal Aprimorado */
+/* Logo Shield V1 - Layout Limpo */
 .nav-brand {
     display: flex;
     align-items: center;
-    gap: 18px;
 }
 
 .logo-responsive {
-    height: 70px;
+    height: 85px; /* Aumentado para mobile */
     width: auto;
-    max-width: 240px; /* Aumentado horizontalmente */
     transition: all 0.3s ease;
-    flex-shrink: 0;
-}
-
-.brand-text {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-    font-size: 20px;
-    background: linear-gradient(135deg, #ff6b9d 0%, #ff9500 30%, #ff6b35 60%, #c44569 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    line-height: 1.2;
-    white-space: nowrap;
-    text-shadow: 0 0 12px rgba(255, 107, 157, 0.4);
-    animation: neuralGlow 2.5s ease-in-out infinite alternate;
-    position: relative;
-}
-
-.brand-text::before {
-    content: '';
-    position: absolute;
-    top: -2px;
-    left: -2px;
-    right: -2px;
-    bottom: -2px;
-    background: linear-gradient(45deg, transparent, rgba(255, 107, 157, 0.1), transparent);
-    border-radius: 4px;
-    animation: neuralPulse 3s linear infinite;
-    z-index: -1;
-}
-
-@keyframes neuralGlow {
-    from {
-        filter: drop-shadow(0 0 8px rgba(255, 107, 157, 0.5)) drop-shadow(0 0 15px rgba(255, 149, 0, 0.3));
-    }
-    to {
-        filter: drop-shadow(0 0 20px rgba(255, 107, 53, 0.7)) drop-shadow(0 0 30px rgba(196, 69, 105, 0.4));
-    }
-}
-
-@keyframes neuralPulse {
-    0%, 100% { opacity: 0; transform: scale(1); }
-    50% { opacity: 1; transform: scale(1.02); }
 }
 
 @media (min-width: 768px) {
-    .nav-brand {
-        gap: 22px;
-    }
-    
     .logo-responsive {
-        height: 90px;
-        max-width: 300px; /* Aumentado */
-    }
-    
-    .brand-text {
-        font-size: 24px; /* Aumentado */
+        height: 110px; /* Aumentado para tablet */
     }
 }
 
 @media (min-width: 1024px) {
-    .nav-brand {
-        gap: 28px;
-    }
-    
     .logo-responsive {
-        height: 120px;
-        max-width: 400px; /* Bem aumentado horizontalmente */
-    }
-    
-    .brand-text {
-        font-size: 28px; /* Bem aumentado */
-        font-weight: 800;
+        height: 140px; /* Bem maior para desktop */
     }
 }
 
-/* Hover effects IA Neural para desktop */
+/* Hover effect simples para logo Shield V1 */
 @media (min-width: 1024px) {
     .nav-brand:hover .logo-responsive {
-        transform: scale(1.08);
-        filter: brightness(1.3) saturate(1.2) hue-rotate(10deg);
-    }
-    
-    .nav-brand:hover .brand-text {
-        background: linear-gradient(135deg, #ff6b9d 0%, #ff9500 20%, #ff6b35 40%, #ff9500 60%, #c44569 80%, #ff6b9d 100%);
-        -webkit-background-clip: text;
-        background-clip: text;
-        transform: translateX(8px) scale(1.06);
-        animation: neuralGlowHover 0.6s ease-out;
-    }
-    
-    .nav-brand:hover .brand-text::before {
-        animation: neuralPulseHover 0.8s ease-out;
+        transform: scale(1.05);
+        filter: brightness(1.1);
     }
 }
-
-@keyframes neuralGlowHover {
-    0% {
-        filter: drop-shadow(0 0 20px rgba(255, 107, 53, 0.7)) drop-shadow(0 0 30px rgba(196, 69, 105, 0.4));
-    }
-    100% {
-        filter: drop-shadow(0 0 35px rgba(255, 107, 157, 0.9)) drop-shadow(0 0 50px rgba(255, 149, 0, 0.6)) drop-shadow(0 0 70px rgba(255, 107, 53, 0.3));
-    }
-}
-
-@keyframes neuralPulseHover {
-    0% { opacity: 1; transform: scale(1.02); }
-    50% { opacity: 0.8; transform: scale(1.08); }
-    100% { opacity: 1; transform: scale(1.02); }
-}
-
-/* Esconder texto em telas muito pequenas */
-@media (max-width: 480px) {
-    .brand-text {
-        display: none;
-    }
-    
-    .nav-brand {
-        gap: 0;
     }
 }
 
