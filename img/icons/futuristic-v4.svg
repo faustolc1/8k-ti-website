@@ -1,0 +1,114 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="cosmicPurple" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+    </radialGradient>
+    <linearGradient id="cosmicTeal" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4facfe;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#00f2fe;stop-opacity:1" />
+    </radialGradient>
+    <filter id="cosmicGlow">
+      <feGaussianBlur stdDeviation="6" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Cosmic Portal -->
+  <circle cx="100" cy="100" r="40" fill="none" stroke="url(#cosmicPurple)" stroke-width="6" filter="url(#cosmicGlow)" opacity="0.8"/>
+  <circle cx="100" cy="100" r="30" fill="none" stroke="url(#cosmicTeal)" stroke-width="4" opacity="0.9"/>
+  <circle cx="100" cy="100" r="20" fill="none" stroke="#ffffff" stroke-width="2" opacity="0.7"/>
+  
+  <!-- Infinity Core -->
+  <path d="M 85 100 Q 92.5 90 100 100 Q 107.5 110 115 100 Q 107.5 90 100 100 Q 92.5 110 85 100 Z" 
+        fill="url(#cosmicTeal)" opacity="0.8" filter="url(#cosmicGlow)"/>
+  
+  <!-- 8K Cosmic Text -->
+  <text x="100" y="110" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="white" filter="url(#cosmicGlow)">8K</text>
+  
+  <!-- Orbital Data Streams -->
+  <g transform-origin="100 100">
+    <ellipse cx="100" cy="100" rx="60" ry="15" fill="none" stroke="url(#cosmicPurple)" stroke-width="2" opacity="0.6" stroke-dasharray="8,4">
+      <animateTransform attributeName="transform" type="rotate" values="0;360" dur="6s" repeatCount="indefinite"/>
+    </ellipse>
+    <ellipse cx="100" cy="100" rx="15" ry="60" fill="none" stroke="url(#cosmicTeal)" stroke-width="2" opacity="0.6" stroke-dasharray="6,6">
+      <animateTransform attributeName="transform" type="rotate" values="360;0" dur="8s" repeatCount="indefinite"/>
+    </ellipse>
+    <ellipse cx="100" cy="100" rx="45" ry="25" fill="none" stroke="url(#cosmicPurple)" stroke-width="1" opacity="0.4" stroke-dasharray="4,8">
+      <animateTransform attributeName="transform" type="rotate" values="180;540" dur="10s" repeatCount="indefinite"/>
+    </ellipse>
+  </g>
+  
+  <!-- Space-Time Particles -->
+  <circle cx="40" cy="60" r="3" fill="url(#cosmicTeal)">
+    <animateMotion dur="8s" repeatCount="indefinite" path="M 0,0 Q 50,-20 100,0 Q 50,20 0,0 Z"/>
+    <animate attributeName="opacity" values="0.3;1;0.3" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  
+  <circle cx="160" cy="140" r="4" fill="url(#cosmicPurple)">
+    <animateMotion dur="10s" repeatCount="indefinite" path="M 0,0 Q -60,30 -120,0 Q -60,-30 0,0 Z"/>
+    <animate attributeName="opacity" values="1;0.2;1" dur="2.5s" repeatCount="indefinite"/>
+  </circle>
+  
+  <circle cx="170" cy="50" r="2" fill="#ffffff">
+    <animateMotion dur="6s" repeatCount="indefinite" path="M 0,0 Q -40,40 -80,0 Q -40,-40 0,0 Z"/>
+    <animate attributeName="opacity" values="0.5;1;0.5" dur="1.8s" repeatCount="indefinite"/>
+  </circle>
+  
+  <!-- Dimensional Rifts -->
+  <path d="M 20 100 Q 40 80 60 100 Q 40 120 20 100" 
+        fill="none" stroke="url(#cosmicTeal)" stroke-width="3" opacity="0.7">
+    <animate attributeName="stroke-dasharray" values="0,60;30,30;60,0" dur="3s" repeatCount="indefinite"/>
+  </path>
+  
+  <path d="M 180 100 Q 160 120 140 100 Q 160 80 180 100" 
+        fill="none" stroke="url(#cosmicPurple)" stroke-width="3" opacity="0.7">
+    <animate attributeName="stroke-dasharray" values="60,0;30,30;0,60" dur="3.5s" repeatCount="indefinite"/>
+  </path>
+  
+  <!-- Quantum Field Grid -->
+  <g opacity="0.2">
+    <path d="M 0 0 L 200 200 M 0 200 L 200 0" stroke="url(#cosmicTeal)" stroke-width="1"/>
+    <path d="M 100 0 L 100 200 M 0 100 L 200 100" stroke="url(#cosmicPurple)" stroke-width="1"/>
+  </g>
+  
+  <!-- Energy Crystals -->
+  <polygon points="30,30 40,20 50,30 40,40" fill="url(#cosmicTeal)" opacity="0.8">
+    <animateTransform attributeName="transform" type="rotate" values="0 40 30;360 40 30" dur="4s" repeatCount="indefinite"/>
+  </polygon>
+  
+  <polygon points="170,170 180,160 190,170 180,180" fill="url(#cosmicPurple)" opacity="0.8">
+    <animateTransform attributeName="transform" type="rotate" values="360 180 170;0 180 170" dur="5s" repeatCount="indefinite"/>
+  </polygon>
+  
+  <polygon points="170,30 180,20 190,30 180,40" fill="#ffffff" opacity="0.6">
+    <animateTransform attributeName="transform" type="rotate" values="0 180 30;360 180 30" dur="3s" repeatCount="indefinite"/>
+  </polygon>
+  
+  <polygon points="30,170 40,160 50,170 40,180" fill="url(#cosmicTeal)" opacity="0.6">
+    <animateTransform attributeName="transform" type="rotate" values="180 40 170;540 40 170" dur="6s" repeatCount="indefinite"/>
+  </polygon>
+  
+  <!-- Cosmic Frame -->
+  <rect x="10" y="10" width="180" height="180" fill="none" stroke="url(#cosmicPurple)" stroke-width="2" opacity="0.4" stroke-dasharray="10,5"/>
+  
+  <!-- Warp Drive Indicators -->
+  <line x1="100" y1="5" x2="100" y2="25" stroke="url(#cosmicTeal)" stroke-width="4" opacity="0.8">
+    <animate attributeName="opacity" values="0.3;1;0.3" dur="1.5s" repeatCount="indefinite"/>
+  </line>
+  
+  <line x1="100" y1="175" x2="100" y2="195" stroke="url(#cosmicPurple)" stroke-width="4" opacity="0.8">
+    <animate attributeName="opacity" values="1;0.3;1" dur="1.8s" repeatCount="indefinite"/>
+  </line>
+  
+  <line x1="5" y1="100" x2="25" y2="100" stroke="url(#cosmicTeal)" stroke-width="4" opacity="0.8">
+    <animate attributeName="opacity" values="0.5;1;0.5" dur="1.2s" repeatCount="indefinite"/>
+  </line>
+  
+  <line x1="175" y1="100" x2="195" y2="100" stroke="url(#cosmicPurple)" stroke-width="4" opacity="0.8">
+    <animate attributeName="opacity" values="1;0.5;1" dur="1.6s" repeatCount="indefinite"/>
+  </line>
+</svg>

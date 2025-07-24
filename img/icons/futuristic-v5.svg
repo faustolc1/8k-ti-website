@@ -1,0 +1,133 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="nanoGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffd700;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ffb300;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="nanoSilver" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#c0c0c0;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#808080;stop-opacity:1" />
+    </linearGradient>
+    <filter id="nanoGlow">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Molecular Core Structure -->
+  <polygon points="100,40 140,70 140,130 100,160 60,130 60,70" 
+           fill="none" stroke="url(#nanoGold)" stroke-width="4" filter="url(#nanoGlow)" opacity="0.9"/>
+  
+  <polygon points="100,55 125,75 125,125 100,145 75,125 75,75" 
+           fill="none" stroke="url(#nanoSilver)" stroke-width="3" opacity="0.8"/>
+  
+  <!-- Central Atom -->
+  <circle cx="100" cy="100" r="18" fill="url(#nanoGold)" opacity="0.9" filter="url(#nanoGlow)"/>
+  <circle cx="100" cy="100" r="12" fill="none" stroke="#ffffff" stroke-width="2" opacity="0.8"/>
+  
+  <!-- 8K Atomic Style -->
+  <text x="100" y="107" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white">8K</text>
+  
+  <!-- Electron Orbits -->
+  <ellipse cx="100" cy="100" rx="50" ry="20" fill="none" stroke="url(#nanoSilver)" stroke-width="2" opacity="0.6" stroke-dasharray="5,3">
+    <animateTransform attributeName="transform" type="rotate" values="0 100 100;360 100 100" dur="4s" repeatCount="indefinite"/>
+  </ellipse>
+  
+  <ellipse cx="100" cy="100" rx="20" ry="50" fill="none" stroke="url(#nanoGold)" stroke-width="2" opacity="0.6" stroke-dasharray="3,5">
+    <animateTransform attributeName="transform" type="rotate" values="360 100 100;0 100 100" dur="5s" repeatCount="indefinite"/>
+  </ellipse>
+  
+  <ellipse cx="100" cy="100" rx="35" ry="35" fill="none" stroke="url(#nanoSilver)" stroke-width="1" opacity="0.4" stroke-dasharray="8,2">
+    <animateTransform attributeName="transform" type="rotate" values="45 100 100;405 100 100" dur="6s" repeatCount="indefinite"/>
+  </ellipse>
+  
+  <!-- Electrons -->
+  <circle cx="150" cy="100" r="4" fill="url(#nanoGold)">
+    <animateMotion dur="4s" repeatCount="indefinite" path="M 0,0 Q 0,-15 -50,-12 Q -50,0 -100,0 Q -50,0 -50,12 Q 0,15 0,0 Z"/>
+    <animate attributeName="opacity" values="0.7;1;0.7" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  
+  <circle cx="100" cy="50" r="3" fill="url(#nanoSilver)">
+    <animateMotion dur="5s" repeatCount="indefinite" path="M 0,0 Q 15,0 12,50 Q 0,50 0,100 Q 0,50 -12,50 Q -15,0 0,0 Z"/>
+    <animate attributeName="opacity" values="1;0.5;1" dur="2.5s" repeatCount="indefinite"/>
+  </circle>
+  
+  <circle cx="65" cy="65" r="3" fill="url(#nanoGold)">
+    <animateMotion dur="6s" repeatCount="indefinite" path="M 0,0 Q 25,25 0,70 Q -25,25 0,0 Z"/>
+    <animate attributeName="opacity" values="0.8;1;0.8" dur="1.8s" repeatCount="indefinite"/>
+  </circle>
+  
+  <!-- Molecular Bonds -->
+  <g stroke="url(#nanoSilver)" stroke-width="2" opacity="0.6">
+    <line x1="100" y1="40" x2="60" y2="70">
+      <animate attributeName="opacity" values="0.3;0.9;0.3" dur="2s" repeatCount="indefinite"/>
+    </line>
+    <line x1="140" y1="70" x2="140" y2="130">
+      <animate attributeName="opacity" values="0.9;0.3;0.9" dur="2.2s" repeatCount="indefinite"/>
+    </line>
+    <line x1="100" y1="160" x2="60" y2="130">
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="1.8s" repeatCount="indefinite"/>
+    </line>
+  </g>
+  
+  <!-- Quantum Dots -->
+  <circle cx="30" cy="40" r="2" fill="url(#nanoGold)">
+    <animate attributeName="r" values="1;4;1" dur="3s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.5;1;0.5" dur="3s" repeatCount="indefinite"/>
+  </circle>
+  
+  <circle cx="170" cy="40" r="2" fill="url(#nanoSilver)">
+    <animate attributeName="r" values="2;5;2" dur="2.5s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.7;1;0.7" dur="2.5s" repeatCount="indefinite"/>
+  </circle>
+  
+  <circle cx="30" cy="160" r="2" fill="url(#nanoGold)">
+    <animate attributeName="r" values="3;1;3" dur="3.5s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="1;0.4;1" dur="3.5s" repeatCount="indefinite"/>
+  </circle>
+  
+  <circle cx="170" cy="160" r="2" fill="url(#nanoSilver)">
+    <animate attributeName="r" values="1;6;1" dur="2.8s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.6;1;0.6" dur="2.8s" repeatCount="indefinite"/>
+  </circle>
+  
+  <!-- Nanotube Structure -->
+  <rect x="20" y="95" width="25" height="10" fill="none" stroke="url(#nanoGold)" stroke-width="1" opacity="0.7"/>
+  <rect x="22" y="97" width="21" height="6" fill="none" stroke="url(#nanoSilver)" stroke-width="1" opacity="0.5"/>
+  
+  <rect x="155" y="95" width="25" height="10" fill="none" stroke="url(#nanoGold)" stroke-width="1" opacity="0.7"/>
+  <rect x="157" y="97" width="21" height="6" fill="none" stroke="url(#nanoSilver)" stroke-width="1" opacity="0.5"/>
+  
+  <!-- Energy Field Lines -->
+  <path d="M 50 50 Q 100 25 150 50" fill="none" stroke="url(#nanoGold)" stroke-width="1" opacity="0.5">
+    <animate attributeName="stroke-dasharray" values="0,100;50,50;100,0" dur="4s" repeatCount="indefinite"/>
+  </path>
+  
+  <path d="M 50 150 Q 100 175 150 150" fill="none" stroke="url(#nanoSilver)" stroke-width="1" opacity="0.5">
+    <animate attributeName="stroke-dasharray" values="100,0;50,50;0,100" dur="4.5s" repeatCount="indefinite"/>
+  </path>
+  
+  <!-- Molecular Frame -->
+  <rect x="15" y="15" width="170" height="170" fill="none" stroke="url(#nanoGold)" stroke-width="1" opacity="0.3" stroke-dasharray="8,4"/>
+  
+  <!-- Tech Readouts -->
+  <g font-family="monospace" font-size="6" fill="url(#nanoSilver)" opacity="0.6">
+    <text x="20" y="25">C60-8K</text>
+    <text x="20" y="180">NANO.SYS</text>
+    <text x="160" y="25">ACTIVE</text>
+    <text x="160" y="180">97.3%</text>
+  </g>
+  
+  <!-- Atomic Vibrations -->
+  <g opacity="0.4">
+    <circle cx="100" cy="100" r="25" fill="none" stroke="url(#nanoGold)" stroke-width="0.5">
+      <animate attributeName="r" values="25;30;25" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="100" cy="100" r="35" fill="none" stroke="url(#nanoSilver)" stroke-width="0.5">
+      <animate attributeName="r" values="35;40;35" dur="2.5s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+</svg>
